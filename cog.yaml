@@ -3,6 +3,7 @@ build:
   cuda: "12.1"
   python_version: "3.11"
   python_packages:
+    - "numpy<2"
     - "torch==2.2.1"
     - "torchvision==0.17.1"
     - "diffusers==0.27.2"
