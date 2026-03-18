@@ -1,6 +1,6 @@
 """
 Replicate client for generating images via ComfyUI.
-No cold starts — uses the shared comfyui/any-comfyui-workflow model.
+Uses CyberRealisticPony v1.70 on ComfyUI via lionelndong/cyberrealistic-pony-comfyui.
 
 Usage:
     from replicate_client import generate_image
@@ -25,7 +25,8 @@ import time
 import requests
 from comfyui_workflows import build_txt2img_workflow, build_img2img_workflow
 
-COMFYUI_VERSION = "16d0a881fbfc066f0471a3519a347db456fe8cbcbd53abb435a50a74efaeb427"
+# CyberRealisticPony v1.70 on ComfyUI
+COMFYUI_VERSION = "7568d4a6e4471e7aa3cbcda25986257a1b7c5a5fc333f74a1bdc2399c27a440d"
 REPLICATE_API_URL = "https://api.replicate.com/v1/predictions"
 
 

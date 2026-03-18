@@ -1,7 +1,7 @@
 """
 ComfyUI workflow generator for Replicate.
-Uses the shared comfyui/any-comfyui-workflow model (always warm, no cold starts).
-Base checkpoint: PonyDiffusion v6 XL (pre-loaded)
+Uses lionelndong/cyberrealistic-pony-comfyui (CyberRealisticPony v1.70 baked in).
+Supports LoRA loading by URL and img2img.
 """
 
 import json
@@ -57,7 +57,7 @@ def build_txt2img_workflow(
     workflow["4"] = {
         "class_type": "CheckpointLoaderSimple",
         "inputs": {
-            "ckpt_name": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+            "ckpt_name": "cyberrealisticPony_v170.safetensors"
         }
     }
 
@@ -191,7 +191,7 @@ def build_img2img_workflow(
     workflow["4"] = {
         "class_type": "CheckpointLoaderSimple",
         "inputs": {
-            "ckpt_name": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+            "ckpt_name": "cyberrealisticPony_v170.safetensors"
         }
     }
 
