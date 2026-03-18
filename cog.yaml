@@ -1,0 +1,22 @@
+build:
+  gpu: true
+  cuda: "12.1"
+  python_version: "3.11"
+  python_packages:
+    - "torch==2.2.1"
+    - "torchvision==0.17.1"
+    - "diffusers==0.27.2"
+    - "transformers==4.39.3"
+    - "accelerate==0.28.0"
+    - "safetensors==0.4.2"
+    - "peft==0.10.0"
+    - "compel==2.0.2"
+    - "invisible-watermark==0.2.0"
+    - "xformers==0.0.25"
+    - "Pillow==10.2.0"
+    - "requests==2.31.0"
+    - "huggingface-hub==0.22.2"
+  run:
+    - "pip install cog"
+
+predict: "predict.py:Predictor"
